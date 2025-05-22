@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Satvik South Reservation</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+body {
+background-image:url("bg.png");
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+
+}
+
+.reservation-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input, textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    margin: 15px 30%;
+    padding: 12px;
+    background-color: #afd63a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:40%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+</style>
+</head>
+<body>
+ <header>
+         <div class="logo">
+        <a href="index.html"><img src="logo1.png" alt="Restaurant Logo" align="left"></a>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="reservation-form-container">
+        <h2>Reserve a Table at Satvik South</h2>
+
+        <form action="reservation-handler.php" method="post">
+            <label for="name">Full Name</label>
+<br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+<br><br>
+            <label for="email">Email</label>
+<br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+<br><br>
+            <label for="phone">Phone Number</label>
+<br>
+            <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your phone number" required>
+<br><br>
+            <label for="date">Date</label>
+<br>
+            <input type="date" id="date" name="date" required>
+<br><br>
+            <label for="time">Time</label>
+<br>
+            <input type="time" id="time" name="time" required>
+<br><br>
+            <label for="guests">Number of Guests</label>
+<br>
+            <input type="number" id="guests" name="guests" min="1" max="20" required>
+<br><br>
+
+            <label for="special-requests">Special Requests</label>
+<br>
+            <textarea id="special-requests" name="special_requests" placeholder="Any special requests?" rows="4"></textarea>
+<br><br>
+
+            <button type="submit">Reserve & Savour</button>
+        </form>
+    </div>
+
+<footer>
+        <p>&copy; 2024 Sattvic South. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
